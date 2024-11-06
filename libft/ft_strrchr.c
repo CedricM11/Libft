@@ -6,7 +6,7 @@
 /*   By: cedmarti <cedmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 13:40:32 by cedmarti          #+#    #+#             */
-/*   Updated: 2024/11/05 11:07:36 by cedmarti         ###   ########.fr       */
+/*   Updated: 2024/11/06 12:24:38 by cedmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,10 @@ char	*ft_strrchr(const char *s, int c)
 {
 	size_t	len;
 
+	if (!s)
+		return (NULL);
 	len = ft_strlen(s);
-	while (len >= 0)
+	while (len > 0)
 	{
 		if (s[len] == (char) c)
 			return ((char *)(s + len));
